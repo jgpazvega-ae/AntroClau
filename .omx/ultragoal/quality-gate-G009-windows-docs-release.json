@@ -1,0 +1,41 @@
+{
+  "goal_id": "G009-windows-docs-release",
+  "timestamp_utc": "2026-05-15T01:57:16Z",
+  "commit": "a3af0133e0cf8d529465950ada88623e3cf3b3f2",
+  "team": "g009-windows-docs-rel-e61d2271",
+  "team_phase": "complete",
+  "tasks": "5/5 completed",
+  "verification": {
+    "release_readiness": "passed",
+    "doc_source_of_truth": "passed",
+    "cargo_fmt": "passed",
+    "targeted_windows_no_credentials_smoke_test": "passed",
+    "cargo_check_workspace": "passed with existing api dead_code warnings",
+    "git_diff_check": "passed",
+    "coverage_check": "passed"
+  },
+  "known_gaps": [
+    {
+      "scope": "actual GitHub windows-latest execution",
+      "status": "not run locally"
+    },
+    {
+      "scope": "full cargo test --workspace",
+      "status": "known pre-existing unrelated CLI failures reported by workers; targeted changed-surface tests pass"
+    }
+  ],
+  "artifacts": [
+    ".github/workflows/rust-ci.yml",
+    ".github/workflows/release.yml",
+    "docs/windows-install-release.md",
+    "docs/g009-windows-docs-release-verification-map.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "SUPPORT.md",
+    "CODE_OF_CONDUCT.md",
+    ".github/scripts/check_release_readiness.py",
+    "/tmp/g009-final-verify.log"
+  ],
+  "git_status": "## main...origin/main [ahead 13]"
+}

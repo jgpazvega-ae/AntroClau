@@ -1,0 +1,32 @@
+G010 final leader verification rerun started 2026-05-15T02:19:36Z
+== artifact checklist ==
+PASS docs/g010-clone-disambiguation-metadata.md exists
+PASS docs/g010-session-hygiene-verification-map.md exists
+.claw/sessions/example.jsonl
+rust/.claw/sessions/example.jsonl
+.claude/sessions/example.json
+== fmt ==
+== runtime session_control retry ==
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.13s
+     Running unittests src/lib.rs (rust/target/debug/deps/runtime-0e7d3d46ae40aa07)
+
+running 15 tests
+test session_control::tests::latest_session_prefers_semantic_updated_at_over_file_mtime ... ok
+test session_control::tests::session_store_from_cwd_canonicalizes_equivalent_paths ... ok
+test session_control::tests::session_store_fork_stays_in_same_namespace ... ok
+test session_control::tests::session_exists_and_delete_are_scoped_to_workspace_store ... ok
+test session_control::tests::resolves_latest_alias_and_loads_session_from_workspace_root ... ok
+test session_control::tests::forks_session_into_managed_storage_with_lineage ... ok
+test session_control::tests::workspace_fingerprint_is_deterministic_and_differs_per_path ... ok
+test session_control::tests::session_store_create_and_load_round_trip ... ok
+test session_control::tests::session_store_from_cwd_isolates_sessions_by_workspace ... ok
+test session_control::tests::creates_and_lists_managed_sessions ... ok
+test session_control::tests::session_store_from_data_dir_namespaces_by_workspace ... ok
+test session_control::tests::session_store_latest_and_resolve_reference ... ok
+test session_control::tests::session_store_loads_safe_legacy_session_from_same_workspace ... ok
+test session_control::tests::session_store_rejects_legacy_session_from_other_workspace ... ok
+test session_control::tests::session_store_loads_unbound_legacy_session_from_same_workspace ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 542 filtered out; finished in 0.02s
+
+G010 final leader verification rerun completed 2026-05-15T02:20:06Z
